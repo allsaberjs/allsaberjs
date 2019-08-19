@@ -1,14 +1,23 @@
 // allsaber
 (function () {
   var root = self;
-  console.warn('self:', self)
 
   // 定义方法宿主变量
   var _ = function () {
-    //
+    // code
   }
 
-  root._ = _;
+  if (typeof exports != 'undefined' && !exports.nodeType) {
+    console.log(1)
+    if (typeof module != 'undefined' && !module.nodeType && module.exports) {
+      exports = module.exports = _;
+    }
+    exports._ = _;
+  } else {
+    console.log(2)
+    root._ = _;
+  }
+
   /**
    * str_objnum  计算字符串、对象成员数通用函数
   */
@@ -358,7 +367,7 @@
     }
   };
   _.test = function () {
-    console.warn('test success....')
+    return '调用成功'
   };
   // export
   return _;
