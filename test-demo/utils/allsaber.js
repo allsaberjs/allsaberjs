@@ -10,6 +10,7 @@
   if (typeof exports != 'undefined' && !exports.nodeType) {
     console.log(1)
     if (typeof module != 'undefined' && !module.nodeType && module.exports) {
+      console.log(1.1)
       exports = module.exports = _;
     }
     exports._ = _;

@@ -1,6 +1,10 @@
 // 引用本地库文件
-// const local = require('./utils/allsaber.js')
-// console.warn('local:', local)
+const _ = require('./utils/allsaber.js')
+console.warn('local:', _)
+
+// 引用npm包
+const npm_ = require('allsaberjs')
+console.warn('npm输出：', npm_)
 
 // es6模式引用
 // import { test } from './utils/allsaber'
@@ -12,6 +16,3 @@
 //   console.log('res:', module.test())
 // })
 
-// 引用npm包
-const un = require('allsaber')
-console.warn('npm输出：', un)
