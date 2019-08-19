@@ -20,6 +20,6 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "underscore": "^1.9.1"
+    "allsaberjs": "^1.0.1"
   }
 }

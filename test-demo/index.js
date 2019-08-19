@@ -7,11 +7,11 @@
 // console.warn('test:', test, test())
 
 // AMD模式引用
-require(['./utils/allsaber.js'], function(module){
-  console.log('module:', module)
-  console.log('res:', module.test())
-})
+// require(['./utils/allsaber.js'], function(module){
+//   console.log('module:', module)
+//   console.log('res:', module.test())
+// })
 
 // 引用npm包
-// const un = require('allsaber')
-// console.warn('npm输出：', un)
+const un = require('allsaber')
+console.warn('npm输出：', un)
