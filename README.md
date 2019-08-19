@@ -28,6 +28,3 @@ require(['allsaber'], function(module){
 })
 ```
 
-keywords
-
-modules

@@ -4,7 +4,7 @@ console.warn('local:', _)
 
 // 引用npm包
 const npm_ = require('allsaberjs')
-console.warn('npm输出：', npm_)
+console.warn('npm输出：', npm_, npm_.test())
 
 // es6模式引用
 // import { test } from './utils/allsaber'
