@@ -1,13 +1,17 @@
-// 此处暂且参考unserscorejs模块测试
-const local = require('./utils/underscore.js')
-console.warn('local:', local)
+// 引用本地库文件
+// const local = require('./utils/allsaber.js')
+// console.warn('local:', local)
 
-// 按需引用测试
-import {test} from './utils/underscore'
-console.warn('test:', test)
+// es6模式引用
+// import { test } from './utils/allsaber'
+// console.warn('test:', test, test())
 
-const un = require('underscore')
-console.warn('npm输出：', un)
+// AMD模式引用
+require(['./utils/allsaber.js'], function(module){
+  console.log('module:', module)
+  console.log('res:', module.test())
+})
 
-// const json = require('./test.json')
-// console.warn('json:', json)
+// 引用npm包
+// const un = require('allsaber')
+// console.warn('npm输出：', un)

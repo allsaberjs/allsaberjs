@@ -30,7 +30,7 @@ module.exports = {
                 { 
                   useBuiltIns: 'usage',
                   corejs: 3,
-                  // modules: 'commonjs'
+                  modules: 'commonjs'
                 }
               ],
             ]
