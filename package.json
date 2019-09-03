@@ -4,7 +4,9 @@
   "description": "JavaScript's functional library for commonly used",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "node scripts/release/publish.js",
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/frankshin/allsaber/issues"
   },
-  "homepage": "https://github.com/frankshin/allsaber#readme"
+  "homepage": "https://github.com/frankshin/allsaber#readme",
+  "dependencies": {
+    "child-process-promise": "^2.2.1",
+    "fs-extra": "^8.1.0",
+    "prompt-promise": "^1.0.3"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2"
+  }
 }
