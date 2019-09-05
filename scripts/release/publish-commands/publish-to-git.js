@@ -1,7 +1,8 @@
 const execa = require('execa');
-const vernum = process.env.version
 
-;(async () => {
+const pushgit = async () => {
+  const vernum = process.env.version;
+  console.log('vernum:', vernum)
   await execa('git', ['add', '-A'], { stdio: 'inherit' })
   await execa(
     'git',
@@ -17,9 +18,7 @@ const vernum = process.env.version
   await execa('git', ['push', 'origin', `v${vernum}`], { stdio: 'inherit' })
   await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
   console.log('release prod end')
-})().catch((err) => {
-  console.log(err)
-  console.error(err.stderr)
-  console.error(err.stdout)
-  process.exit(1)
-})
+}
+
+module.exports = pushgit
+
