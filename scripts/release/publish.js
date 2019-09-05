@@ -4,7 +4,7 @@
 
 const { join } = require('path')
 const confirmVersionAndTags = require('./publish-commands/confirm-version');
-// const publishToGit = require('./publish-commands/publish-to-git');
+const publishToGit = require('./publish-commands/publish-to-git');
 const publishToNPM = require('./publish-commands/publish-to-npm');
 
 const run = async () => {
