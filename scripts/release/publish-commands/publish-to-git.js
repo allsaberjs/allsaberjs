@@ -14,7 +14,6 @@ const pushgit = async () => {
     ['version', vernum, '-m', `chore: update version with tag v${vernum}`],
     { stdio: 'inherit' }
   )
-  
   await execa('git', ['push', 'origin', `v${vernum}`], { stdio: 'inherit' })
   await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
   console.log('release prod end')
