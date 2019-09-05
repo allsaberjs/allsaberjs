@@ -8,11 +8,11 @@ const version = process.env.version
     { stdio: 'inherit' }
   )
   await execa('git', ['add', '-A'], { stdio: 'inherit' })
-  await execa(
-    'git',
-    ['commit', '-m', `build: build production v${version}`],
-    { stdio: 'inherit' }
-  )
+  // await execa(
+  //   'git',
+  //   ['commit', '-m', `build: build production v${version}`],
+  //   { stdio: 'inherit' }
+  // )
   await execa('git', ['push', 'origin', `v${version}`], { stdio: 'inherit' })
   await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
   console.log('release prod end')
