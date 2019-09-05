@@ -3,9 +3,9 @@ const { readJsonSync } = require('fs-extra');
 const { join } = require('path');
 const { confirm, execRead } = require('../utils');
 const theme = require('../theme')
-const version = process.env.version
 
 const run = async ({ cwd }) => {
+  const version = process.env.version
   const packageName = 'allsaberjs';
   const info = await execRead(`npm view allsaberjs@${version}`);
 
