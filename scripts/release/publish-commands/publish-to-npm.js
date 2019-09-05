@@ -17,9 +17,7 @@ const run = async ({ cwd }) => {
     await confirm('Is this expected?');
   } else {
     // Publish the package and tag it
-    // await exec(`npm publish --tag=${version} --otp=${otp}`, {
-    //   cwd: packagePath,
-    // });
+    await exec(`npm publish --tag=${version}`);
     // tips
     console.log(
       theme`{spinnerSuccess ✓} Publishing {package ${packageName}}`
