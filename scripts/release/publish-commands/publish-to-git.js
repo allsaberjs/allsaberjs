@@ -1,9 +1,9 @@
-const { exec } = require('child-process-promise');
+const { execa } = require('execa');
 const version = process.env.version
 
 ;(async () => {
-  await exec('git', ['add', '-A'], { stdio: 'inherit' })
-  await exec(
+  await execa('git', ['add', '-A'], { stdio: 'inherit' })
+  await execa(
     'git',
     ['commit', '-m', `build: build production v${version}`],
     { stdio: 'inherit' }
@@ -13,8 +13,8 @@ const version = process.env.version
     ['version', version, '-m', `chore: update version with tag v${version}`],
     { stdio: 'inherit' }
   )
-  await exec('git', ['push', 'origin', `v${version}`], { stdio: 'inherit' })
-  await exec('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
+  await execa('git', ['push', 'origin', `v${version}`], { stdio: 'inherit' })
+  await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
   console.log('release prod end')
 })().catch((err) => {
   console.log(err)
