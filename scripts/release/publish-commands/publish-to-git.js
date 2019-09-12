@@ -1,4 +1,5 @@
 const execa = require('execa');
+const theme = require('../theme')
 
 const pushgit = async () => {
   const vernum = process.env.version;
@@ -16,7 +17,9 @@ const pushgit = async () => {
   )
   await execa('git', ['push', 'origin', `v${vernum}`], { stdio: 'inherit' })
   await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
-  console.log('release prod end')
+  console.log(
+    theme`{package ✓} Publish to {package github} finished...`
+  );
 }
 
 module.exports = pushgit

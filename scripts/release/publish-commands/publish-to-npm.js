@@ -20,7 +20,7 @@ const run = async ({ cwd }) => {
     await exec(`npm publish`);
     // tips
     console.log(
-      theme`{spinnerSuccess ✓} Publishing {package ${packageName}}`
+      theme`{spinnerSuccess ✓} Publishing {package ${packageName}} to npm finished...`
     );
   }
 }
