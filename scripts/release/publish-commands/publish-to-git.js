@@ -5,13 +5,13 @@ const pushgit = async () => {
   console.log('vernum:', vernum)
   await execa('git', ['add', '-A'], { stdio: 'inherit' })
   await execa(
-    'git',
-    ['commit', '-m', `build: build production v${vernum}`],
+    'npm',
+    ['version', vernum, '-m', `chore: update version with tag v${vernum}`],
     { stdio: 'inherit' }
   )
   await execa(
-    'npm',
-    ['version', vernum, '-m', `chore: update version with tag v${vernum}`],
+    'git',
+    ['commit', '-m', `build: build production v${vernum}`],
     { stdio: 'inherit' }
   )
   await execa('git', ['push', 'origin', `v${vernum}`], { stdio: 'inherit' })
