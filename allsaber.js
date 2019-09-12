@@ -369,6 +369,13 @@
   _.test = function () {
     return '调用成功'
   };
+  /**
+   * 深拷贝
+   */
+
+  /**
+   * 浅拷贝
+   */
   // export
   return _;
 })();
