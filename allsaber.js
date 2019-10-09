@@ -354,6 +354,7 @@
   };
   /**
    * 防抖debounce
+   * 闭包：？
    */
   _.debounce = function (fun, args, wait) {
     console.log('debounc...')
