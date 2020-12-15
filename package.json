@@ -1,11 +1,11 @@
 {
   "name": "allsaberjs",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "description": "JavaScript's functional library for commonly used",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "node scripts/publish.js",
+    "release": "node scripts/publish.js",
     "build": "node scripts/build.js"
   },
   "repository": {
