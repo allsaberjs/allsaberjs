@@ -1,6 +1,4 @@
 const { exec } = require('child-process-promise');
-const { readJsonSync } = require('fs-extra');
-const { join } = require('path');
 const { confirm, execRead } = require('../utils');
 const theme = require('../theme')
 

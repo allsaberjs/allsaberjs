@@ -1,3 +1,1 @@
-const a = require('./allsaber')
-// export default a
-module.exports = a
+module.exports = require('./allsaber')
