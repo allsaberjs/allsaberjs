@@ -14,6 +14,6 @@ const run = async () => {
 
   await confirmVersionAndTags(params); // 确定版本号
   await publishToGit();  // 发布到github
-  await publishToNPM(params); // 发布到npm
+  // await publishToNPM(params); // 发布到npm
 };
 run();
