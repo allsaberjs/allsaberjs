@@ -12,17 +12,17 @@ const pushgit = async () => {
     ['commit', '-m', `build production v${vernum}`],
     { stdio: 'inherit' }
   )
-  // await execa(
-  //   'npm',
-  //   ['version', vernum, '-m', `chore: update version with tag v${vernum}`],
-  //   { stdio: 'inherit' }
-  // )
-  // // await execa('git', ['push', 'origin', `v${vernum}`], { stdio: 'inherit' })
-  // // await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
-  // await execa('git', ['push'], { stdio: 'inherit' })
-  // console.log(
-  //   theme`{package ✓} Publish to {package github} finished...`
-  // );
+  await execa(
+    'npm',
+    ['version', vernum, '-m', `chore: update version with tag v${vernum}`],
+    { stdio: 'inherit' }
+  )
+  // await execa('git', ['push', 'origin', `v${vernum}`], { stdio: 'inherit' })
+  // await execa('git', ['push', 'origin', 'master'], { stdio: 'inherit' })
+  await execa('git', ['push'], { stdio: 'inherit' })
+  console.log(
+    theme`{package ✓} Publish to {package github} finished...`
+  );
 }
 
 module.exports = pushgit
