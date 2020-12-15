@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release-all": "node scripts/publish.js",
-    "release-npm": "node scripts/publish-npm.js",
-    "release-git": "node scripts/publish-git.js",
+    "release": "node scripts/publish.js",
     "build": "node scripts/build.js"
   },
   "repository": {
