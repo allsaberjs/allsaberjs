@@ -5,6 +5,7 @@ const theme = require('./theme')
 
 const pushgit = async () => {
   const vernum = process.env.version;
+  console.log(3333, vernum)
   console.log('vernum:', vernum)
   await execa('git', ['add', '-A'], { stdio: 'inherit' })
   await execa(
