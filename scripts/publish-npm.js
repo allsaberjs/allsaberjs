@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 const { exec } = require('child-process-promise');
-const { confirm, execRead } = require('../utils');
-const theme = require('../theme')
+const { confirm, execRead } = require('./utils');
+const theme = require('./theme')
 
 const run = async ({ cwd }) => {
   const version = process.env.version

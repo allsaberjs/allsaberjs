@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 const execa = require('execa');
-const theme = require('../theme')
+const theme = require('./theme')
 
 const pushgit = async () => {
   const vernum = process.env.version;
