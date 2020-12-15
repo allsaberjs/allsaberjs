@@ -9,7 +9,7 @@ const pushgit = async () => {
   await execa('git', ['add', '-A'], { stdio: 'inherit' })
   await execa(
     'git',
-    ['commit', '-m', `build: build production v${vernum}`],
+    ['commit', '-m', `build production v${vernum}`],
     { stdio: 'inherit' }
   )
   await execa(
