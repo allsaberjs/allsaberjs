@@ -3,7 +3,7 @@ const semver = require('semver')
 const { join } = require('path');
 
 const bumpVersion = async ({ cwd }) => {
-  const currentVersion = require(join(cwd, 'package.json')).version
+  const currentVersion = require(join(cwd, 'allsaberjs/package.json')).version
   console.warn('currentVersion:', currentVersion)
   const bumps = ['patch', 'minor', 'major']
   const versions = {}
