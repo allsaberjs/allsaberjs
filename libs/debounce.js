@@ -1,11 +1,11 @@
-module.exports = function (fun, args, wait) {
-  console.log('debounc...')
+function dobounce (fun, args, wait) {
   let timeout
   return function () {
-    console.log('debounc callback...')
     if (timeout) clearTimeout(timeout)
     timeout = setTimeout(() => {
       fun.apply(args, [true])
     }, wait)
   }
 }
+
+module.exports = dobounce
