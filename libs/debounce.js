@@ -1,9 +1,9 @@
-function dobounce (fun, args, wait) {
+function dobounce (fun, wait) {
   let timeout
   return function () {
     if (timeout) clearTimeout(timeout)
     timeout = setTimeout(() => {
-      fun.apply(args, [true])
+      fun.apply(this, arguments)
     }, wait)
   }
 }
