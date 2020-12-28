@@ -5,5 +5,6 @@ allsaber.getCookie = require('./libs/get-cookie');
 allsaber.getQuery = require('./libs/get-query');
 allsaber.setCookie = require('./libs/set-cookie');
 allsaber.transformArr = require('./lib/transform-arr');
+allsaber.deepClone = require('./lib/deepClone');
 
 module.exports = allsaber
