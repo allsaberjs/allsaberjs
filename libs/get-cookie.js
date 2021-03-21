@@ -1,4 +1,4 @@
-module.exports = function(name) {
+export function getCookie(name) {
   var cookieName = encodeURIComponent(name) + '=',
   cookieStart = document.cookie.indexOf(cookieName),
   cookieValue = null;

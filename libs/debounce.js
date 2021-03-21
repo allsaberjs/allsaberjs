@@ -1,4 +1,4 @@
-function dobounce (fun, wait) {
+export function dobounce (fun, wait) {
   let timeout
   return function () {
     if (timeout) clearTimeout(timeout)
@@ -8,4 +8,3 @@ function dobounce (fun, wait) {
   }
 }
 
-module.exports = dobounce

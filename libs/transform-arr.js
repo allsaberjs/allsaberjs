@@ -1,7 +1,7 @@
 /**
  * 将NodeList或arguments转化为普通数组的通用方法（兼容所有浏览器）
  */
-module.exports = function(arr) {
+export function transformArr(arr) {
   var array;
   try {
     array = Array.prototype.slice.call(arr, 0);

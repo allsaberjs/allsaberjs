@@ -26,6 +26,7 @@
   "devDependencies": {
     "chalk": "^2.4.2",
     "child-process-promise": "^2.2.1",
+    "eslint": "^7.22.0",
     "execa": "^5.0.0",
     "inquirer": "^7.0.0",
     "prompt-promise": "^1.0.3",

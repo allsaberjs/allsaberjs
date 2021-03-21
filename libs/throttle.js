@@ -4,7 +4,7 @@
  * @param {*} gapTime 单位时间
  * @returns undefined
  */
-function throttle(fn, gapTime) {
+export function throttle(fn, gapTime) {
   let _lastTime = null;
 
   return function () {
@@ -16,4 +16,3 @@ function throttle(fn, gapTime) {
   }
 }
 
-module.exports = throttle
