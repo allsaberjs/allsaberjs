@@ -2,7 +2,7 @@
  * 截流：规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行
  * @param {*} fn
  * @param {*} timegap 单位时间
- * @returns undefined
+ * @returns function
  */
 export const throttle = (fn, timegap) => {
   let nowTime = +new Date()
