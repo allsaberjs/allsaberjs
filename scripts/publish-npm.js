@@ -9,18 +9,13 @@ const run = async ({ cwd }) => {
   const packageName = 'allsaberjs';
   const info = await execRead(`npm view allsaberjs@${version}`);
 
-  console.warn('process.env.version:', process.env.version)
   if (info) {
-    console.log(
-      theme`{package ${packageName}} {version ${version}} has already been published.`
-    );
+    console.log(theme`{package ${packageName}} {version ${version}} has already been published.`);
     await confirm('Is this expected?');
   } else {
     await exec(`npm publish`);
     // tips
-    console.log(
-      theme`{spinnerSuccess ✓} Publishing {package ${packageName}} to npm finished...`
-    );
+    console.log(theme`{spinnerSuccess ✓} Publishing {package ${packageName}} to npm finished...`);
   }
 }
 
