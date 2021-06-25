@@ -1,5 +1,12 @@
 /**
  * 该方法基于国际uuid规范version4.0
+ * 
+ * 附：
+ * 版本1：基于时间的UUID
+ * 版本2：DCE安全的UUID
+ * 版本3：基于名字空间的UUID（MD5）
+ * 版本4：基于随机数的UUID
+ * 版本5：基于名字空间的UUID（SHA1）相比v3，散列函数换成了SHA1
  */
  export const generateUuid = (len) => {
   const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
@@ -31,14 +38,3 @@
   }
   return uuid.join('');
 }
-
-
-/**
- * 附：
- * 版本1：基于时间的UUID
- * 版本2：DCE安全的UUID
- * 版本3：基于名字空间的UUID（MD5）
- * 版本4：基于随机数的UUID
- * 版本5：基于名字空间的UUID（SHA1）相比v3，散列函数换成了SHA1
- */
-
